@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#x=$1 ; 
+#echo x is $1 ; 
+#exit
+
 check_expiration() {
     local input_string="$1"
     local date_pattern="notAfter=([A-Za-z]{3} [0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} [0-9]{4} GMT)"
@@ -28,4 +32,6 @@ check_expiration() {
 }
 
 # Example usage:
-check_expiration "notAfter=Mar 12 20:08:08 2024 GMT"
+##check_expiration "notAfter=Mar 12 20:08:08 2024 GMT"
+echo input is __ $1 __ 
+check_expiration "$1"
